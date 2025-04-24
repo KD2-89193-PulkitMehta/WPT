@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <h1 style="text-align: center;"><u>Calculator</u></h1>
+    <div style="justify-content: center; display: flex;">   
+    <table class="table-bordered">
+        <tbody>
+        <tr>
+            <td>Enter Number 1</td>
+            <td style="text-align: center;"><input id="ipt1" type="number" style="margin: 2px;"></td>
+        </tr>
+        <tr>
+            <td>Enter Number 2</td>
+            <td style="text-align: center;"><input id="ipt2" type="number" style="margin: 2px;"></td>
+        </tr>
+        <tr>
+            <td>Result</td>
+            <td id="res" style="text-align: center;"><input type="number" readonly style="margin: 2px;"></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">
+                <button id="b1" onclick="add()" style="border-radius: 8px; background-color: white;">Addition</button>
+                <button id="b2" onclick="sub()" style="border-radius: 8px; background-color: white;">Subtraction</button>
+                <button id="b3" onclick="mul()" style="border-radius: 8px; background-color: white;">Multiplication</button>
+                <button id="b4" onclick="div()" style="border-radius: 8px; background-color: white;">Division</button>
+            </td>
+        </tr>
+    </tfoot>
+    </table>
+</div>
+</body>
+<script>
+    const ipt1=document.getElementById("ipt1")
+    const ipt2=document.getElementById("ipt2")
+    const res=document.getElementById("res")
+    function add(){
+const result=parseInt(ipt1.value)+parseInt(ipt2.value)
+const td=`<input type="number" readonly style="margin: 2px;" placeholder="${result}">`
+res.innerHTML=td
+    }
+    function sub(){
+        const result=parseInt(ipt1.value)-parseInt(ipt2.value)
+const td=`<input type="number" readonly style="margin: 2px;" placeholder="${result}">`
+res.innerHTML=td
+    }
+    function mul(){
+        const result=parseInt(ipt1.value)*parseInt(ipt2.value)
+const td=`<input type="number" readonly style="margin: 2px;" placeholder="${result}">`
+res.innerHTML=td
+    }
+    function div(){
+        const result=parseInt(ipt1.value)/parseInt(ipt2.value)
+const td=`<input type="number" readonly style="margin: 2px;" placeholder="${result}">`
+res.innerHTML=td
+    } 
+</script>
+</html>

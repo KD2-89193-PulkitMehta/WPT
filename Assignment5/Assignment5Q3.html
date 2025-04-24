@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment5</title>
+</head>
+
+<body>
+    <script>
+        let arr=[]
+        function f1() {
+            val = window.prompt("Enter the number (n) :")
+            if (val < 0) {
+                f1()
+            }
+            else {
+                console.log("Live reload enabled.")
+                for (let i = 1; i <= val; i++) {
+                    if (i % 2 == 0) {
+                        arr.push(i)
+                    }
+                }
+            }
+            // console.log(arr)
+            console.log("Even number <= "+val+": "+arr.join(","))
+        }
+        f1()
+
+    </script>
+
+</body>
+
+</html>

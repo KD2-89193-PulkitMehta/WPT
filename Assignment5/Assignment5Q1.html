@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment5</title>
+</head>
+<body>
+    <script>
+        function callNum1(){
+            num1=window.prompt("Enter the first Number :")
+            if(num1 < 0){
+                window.alert("Please enter valid positive numbers!")
+                callNum1();
+            }
+        }
+
+        function callNum2(){
+            num2=window.prompt("Enter the Second Number :")
+            if(num2 < 0){
+                window.alert("Please enter valid positive numbers!")
+                callNum2();
+            }
+        }
+
+        function callNum3(){
+            num3=window.prompt("Enter the Third Number :")
+            if(num3 < 0){
+                window.alert("Please enter valid positive numbers!")
+                callNum3();
+            }
+        }
+        // let flag=0;
+        for(let i=0;i<3;i++){
+            if(i==0){ 
+                callNum1()
+            }else if(i==1){
+                callNum2()
+            }else{
+                callNum3()
+            }
+        }
+        // if(flag==0){
+            if(num1 > num2 && num1 > num3){
+                result = num1
+            }else if(num2 > num1 && num2 > num3){
+                result = num2
+            }else{
+                result = num3
+            }
+            window.alert("The largest number is : " + result)
+        // }
+    </script>
+</body>
+</html>

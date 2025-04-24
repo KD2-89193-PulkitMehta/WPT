@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment5Q2</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            val = window.prompt("Enter the number of times to print the message:")
+            if(val <0){
+                window.alert("Please enter valid positive integer!");
+                f1()
+            }
+        }
+        function f2(){
+            message = window.prompt("Enter the message:")
+            if(message == ""){
+                window.alert("Please enter a valid message!")
+                f2()
+            }
+        }
+
+        for(let i=0;i<2;i++){
+            if(i==0){
+                f1()
+            }else{
+                f2()
+            }
+        }
+        window.alert("Check the console for the repeated messages!")
+        console.log("Repeated Message:")
+        for(let i=1;i<=val;i++){
+            console.log(i+"."+message)
+        }
+    </script>
+
+</body>
+</html>
